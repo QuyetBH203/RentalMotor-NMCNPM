@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/dao/UserDAO.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/Client.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/dao/DAO.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/dao/CollateralDAO.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/view/motor/SearchMotorFrm.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/Collateral.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/dao/ContractDAO.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/rentalmotor/RentalMotor.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/dao/ClientDAO.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/Contract.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/Store.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/view/client/AddClientFrm.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/dao/DetailAssetsDAO.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/User.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/view/user/HomeFrm.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/dao/MotorDAO.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/RentalDetail.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/view/client/SearchClientFrm.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/Motor.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/view/contract/ContractFrm.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/view/motor/SearchMotor.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/model/DetailAssets.java</file>
+            <file>file:/D:/software%20engineering/NMCNPM-PTIT/RentalMotor/src/view/user/LoginFrm.java</file>
+        </group>
+    </open-files>
+</project-private>
