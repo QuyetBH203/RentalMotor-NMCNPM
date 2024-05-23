@@ -7,7 +7,6 @@ package view.user;
 import dao.UserDAO;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import model.User;
 

@@ -22,13 +22,14 @@ public class DetailAssetsDAO extends DAO{
     }
     
     public int  addDetailAssets(DetailAssets detailAssets, int idCon){
-       String sql = "INSERT INTO tbldetailassets(amount, description,tblCollateralId, tblContractId) VALUES(?,?,?,?)";
+       String sql = "INSERT INTO tbldetailassets(amount, description,tblCollateralId, tblContractId,price) VALUES(?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, detailAssets.getAmount());
             ps.setString(2, detailAssets.getDescription());
             ps.setInt(3, detailAssets.getCollateral().getId());
             ps.setInt(4, idCon);
+            ps.setDouble(5, detailAssets.getPrice());
 
             ps.executeUpdate();
 

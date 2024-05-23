@@ -26,11 +26,11 @@ public class RentalMotor {
      */
     public static void main(String[] args) {
         //DAO dao=new DAO();
-        CollateralDAO cdao=new CollateralDAO();
-        Collateral con=new Collateral();
-        con.setName("Iphone 14 pro max");
-        con.setPrice(12_000_000.0);
-        System.out.println(cdao.addCollateral(con));
+       CollateralDAO con =new  CollateralDAO();
+        ArrayList<Collateral> array =con.getCollateral();
+        for(Collateral x : array){
+            System.out.println(x.getName());
+        }
         
 
     }

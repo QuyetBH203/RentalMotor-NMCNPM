@@ -19,19 +19,32 @@ import model.RentalDetail;
  *
  * @author buihu
  */
-public class ContractFrm extends javax.swing.JFrame implements ActionListener{
+public class ContractFrm extends javax.swing.JFrame implements ActionListener {
 
     /**
      * Creates new form ContractFrm
+     *
      * @param contract
      */
     public ContractFrm(Contract contract) {
-        this.contract=contract;
+        this.contract = contract;
         initComponents();
+        CollateralDAO collateralDAO = new CollateralDAO();
+        ArrayList<String> name = new ArrayList<>();
+        ArrayList<Collateral> a = collateralDAO.getCollateral();
+        for (Collateral x : a) {
+            name.add(x.getName());
+        }
+        for (String y : name) {
+            jComboBox2.addItem(y);
+        }
         jButton1.addActionListener(this);
+
     }
 //    public ContractFrm(){
 //        initComponents();
+//      
+//        
 //    }
 
     /**
@@ -53,7 +66,6 @@ public class ContractFrm extends javax.swing.JFrame implements ActionListener{
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
@@ -64,6 +76,7 @@ public class ContractFrm extends javax.swing.JFrame implements ActionListener{
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,15 +134,10 @@ public class ContractFrm extends javax.swing.JFrame implements ActionListener{
                             .addComponent(jLabel7))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(79, 79, 79)
+                                        .addGap(262, 262, 262)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -152,7 +160,13 @@ public class ContractFrm extends javax.swing.JFrame implements ActionListener{
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -185,9 +199,9 @@ public class ContractFrm extends javax.swing.JFrame implements ActionListener{
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -257,13 +271,14 @@ public class ContractFrm extends javax.swing.JFrame implements ActionListener{
     public void setContract(Contract contract) {
         this.contract = contract;
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -278,50 +293,49 @@ public class ContractFrm extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       if(e.getSource()==jButton1){
-           String node = jTextArea1.getText();
-           String paymentType = (String) jComboBox1.getSelectedItem();
-           contract.setNode(node);
-           contract.setPaymentType(paymentType);
-           for(RentalDetail x : contract.getRentalDetails()){
-               String desDamages = jTextArea2.getText();
-               x.setDesDamage(desDamages);
-           }
-           ContractDAO cdao=new ContractDAO();
-           boolean result=cdao.addContract(contract);
-           if(result){
-               CollateralDAO collateralDAO=new CollateralDAO();
-               Collateral collateral = new Collateral();
-               collateral.setName(jTextField1.getText().trim());
-               collateral.setPrice(Double.valueOf(jTextField3.getText().trim()));
-               int re=collateralDAO.addCollateral(collateral);
-               collateral.setId(re);
-               if(re >0){
-                   DetailAssetsDAO dadao=new DetailAssetsDAO();
-                   DetailAssets detailAssets=new DetailAssets();
-                   detailAssets.setCollateral(collateral);
-                   detailAssets.setAmount(Integer.valueOf(jTextField2.getText()));
-                   detailAssets.setDescription(jTextArea3.getText());
-                   dadao.addDetailAssets(detailAssets, contract.getId());
-               }
-            
-               
-           }
-           
-           //cdao.addContract(contract);
-           
-           
-           
-         
-        this.dispose();
-        
-       }
+        if (e.getSource() == jButton1) {
+            String node = jTextArea1.getText();
+            String paymentType = (String) jComboBox1.getSelectedItem();
+            contract.setNode(node);
+            contract.setPaymentType(paymentType);
+            for (RentalDetail x : contract.getRentalDetails()) {
+                String desDamages = jTextArea2.getText();
+                x.setDesDamage(desDamages);
+            }
+            ContractDAO cdao = new ContractDAO();
+            boolean result = cdao.addContract(contract);
+            if (result) {
+//                CollateralDAO collateralDAO = new CollateralDAO();
+                Collateral collateral = new Collateral();
+//               collateral.setName(jTextField1.getText().trim());
+
+//                collateral.setPrice(Double.valueOf(jTextField3.getText().trim()));
+//                int re = collateralDAO.addCollateral(collateral);
+                int idOfCollateral =jComboBox2.getSelectedIndex();
+                String nameOfCollateral = (String) jComboBox2.getSelectedItem();
+                collateral.setId(idOfCollateral);
+                collateral.setName(nameOfCollateral);
+                
+
+                DetailAssetsDAO dadao = new DetailAssetsDAO();
+                DetailAssets detailAssets = new DetailAssets();
+                detailAssets.setCollateral(collateral);
+                detailAssets.setAmount(Integer.valueOf(jTextField2.getText()));
+                detailAssets.setDescription(jTextArea3.getText());
+                detailAssets.setPrice(Double.valueOf(jTextField3.getText().trim()));
+                dadao.addDetailAssets(detailAssets, contract.getId());
+
+            }
+
+            //cdao.addContract(contract);
+            this.dispose();
+
+        }
     }
 }

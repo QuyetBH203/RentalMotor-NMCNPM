@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import model.Client;
 import model.Collateral;
 
@@ -41,6 +42,28 @@ public class CollateralDAO extends DAO{
             e.printStackTrace();
         }
         return 0;
+    }
+    
+    public ArrayList<Collateral> getCollateral(){
+        ArrayList<Collateral> result =new ArrayList<>();
+        String sql = "SELECT id , name from tblcollateral";
+        try{
+            PreparedStatement ps=con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery();
+             while(rs.next()){
+                 Collateral collateral = new Collateral();
+                 collateral.setId(rs.getInt("id"));
+                 collateral.setName(rs.getString("name"));
+                 result.add(collateral);
+             }
+             return result;
+            
+            
+        }catch(Exception e){
+            
+        }
+        return result;
+       
     }
     
 }

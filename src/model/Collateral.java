@@ -60,4 +60,5 @@ public class Collateral implements Serializable{
     public void setNote(String note) {
         this.note = note;
     }
+    
 }
